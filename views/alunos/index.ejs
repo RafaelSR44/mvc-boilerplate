@@ -31,6 +31,7 @@
 
   <hr>
 
+  <h2>Lista de Alunos</h2>
   <ul>
     <% alunos.forEach(aluno=> { %>
       <li>
@@ -53,6 +54,23 @@
               </form>
       </li>
       <% }) %>
+  </ul>
+
+  <hr>
+  
+  <h2>Lista de Cursos</h2>
+  <ul>
+    <% cursos.forEach(curso => { %>
+      <li>
+        <form action="/cursos/edit/<%= curso.id %>" method="POST" style="display:inline;">
+          <input name="nome" value="<%= curso.nome %>" required>
+          <button type="submit">✏️</button>
+        </form>
+        <form action="/cursos/delete/<%= curso.id %>" method="POST" style="display:inline;">
+          <button type="submit" onclick="return confirm('Tem certeza que deseja excluir?')">🗑️</button>
+        </form>
+      </li>
+    <% }) %>
   </ul>
 </body>
 

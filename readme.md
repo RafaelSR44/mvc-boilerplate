@@ -1,3 +1,13 @@
+# Pergunta em aula
+
+#### Explique com suas palavras o funcionamento do models, controller, e fale sobre endpoints no projeto.
+
+#### Resposta:
+
+Em um projeto web estruturado no padrão MVC, os models são responsáveis por definir a estrutura das tabelas no banco de dados e suas relações. No seu caso, aluno.js, curso.js e professor.js definem as entidades principais, com destaque para o relacionamento entre alunos e cursos através de uma chave estrangeira. Os controllers (alunoController.js, cursoController.js e professorController.js) atuam como intermediários entre o usuário e os dados, processando requisições e executando operações CRUD (Criar, Ler, Atualizar e Deletar). Já os endpoints, definidos nos arquivos de rotas (alunos.js, cursos.js e professores.js), são URLs que permitem acesso às funcionalidades do sistema. Por exemplo, a rota http://localhost:3000/alunos permite gerenciar alunos e cursos, enquanto http://localhost:3000/professores gerencia dados dos professores. Quando um usuário acessa uma URL, o servidor identifica a rota correspondente, que chama o método apropriado no controller, que por sua vez utiliza o model para interagir com o banco de dados e retornar uma resposta. Esta arquitetura organiza claramente as responsabilidades, facilitando manutenção e escalabilidade do projeto.
+
+
+
 # Boilerplate MVC em Node.js com PostgreSQL
 
 Este projeto é um boilerplate básico para uma aplicação Node.js seguindo o padrão MVC (Model-View-Controller), utilizando PostgreSQL como banco de dados.
